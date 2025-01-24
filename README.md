@@ -14,9 +14,6 @@
  ```
  
  ```
- ➜  rust-samtools git:(main) ✗ ./target/debug/rust-samtools -h
- prepairing the json for the bacdive
-
  Usage: rust-samtools <COMMAND>
 
  Commands:
@@ -28,12 +25,12 @@
   sam-up-down-align-view  upstream and downstream regions,prankaligner and visualization of the alignments
   sam-up-down-align       allows for the extraction of the upstream and downstream regions from the samfile
   filter                  allows for the filtering of the samfile
+  filter-range            allows for the filtering of the samfile with specified range
   help                    Print this message or the help of the given subcommand(s)
 
  Options:
   -h, --help     Print help
   -V, --version  Print version
-
  ``` 
 
  Gaurav Sablok

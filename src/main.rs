@@ -17,6 +17,7 @@ use crate::idrange::fastidrange;
 use crate::tagview::tagview;
 use crate::view::alignview;
 use crate::viewer::readsview;
+use crate::filter::srange;
 use clap::Parser;
 
 /*
@@ -25,11 +26,12 @@ use clap::Parser;
 *Date 2024-1-23
 rust-samtools: provide all the abilities that you have to use with the
 samtools and some more for the hybrid assay and also the development of
-the approaches for the specific sequencing of certain region.
+the approaches for the specific sequencing of certain region. As of now
+these are single threaded rust-samtools and i am importing the rayon and
+making it parallel threaded.
 
 */
 
-///
 fn main() {
     let samtoolsargs = CommandParse::parse();
     match &samtoolsargs.command {
@@ -112,6 +114,10 @@ fn main() {
         Commands::Filter { pathsam, pathstart } => {
             let commandoutput = filter(pathsam, *pathstart).unwrap();
             println!("The requested samile has been filtered:{:?}", commandoutput);
+        }
+        Commands::FilterRange{pathsam, start, end} => {
+            let commandoutput = srange(pathsam, *start, *end).unwrap();
+            println!("The filter range has been applied: {:?}", commandoutput);
         }
     }
 }

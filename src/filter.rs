@@ -36,7 +36,7 @@ pub fn filter(pathsam: &str, start: usize) -> Result<String, Box<dyn Error>> {
     }
     let mut samtools_start = File::create("sorted_selected-start.sam").expect("file not present");
     for i in limit.iter_mut() {
-        write!(samtools_start, "{}\n", i.line).expect("not able to write th line");
+        writeln!(samtools_start, "{}\n", i.line).expect("not able to write th line");
     }
     Ok("The files have been written and the summary is given below".to_string())
 }
@@ -82,7 +82,7 @@ pub fn srange(pathsam: &str, start: usize, end: usize) -> Result<String, Box<dyn
 
     let mut samtools_range = File::create("samtools-range.sam").expect("file not found");
     for i in commonjoin.iter() {
-        write!(samtools_range, "{}\n", i).expect("line not found");
+        writeln!(samtools_range, "{}\n", i).expect("line not found");
     }
 
     Ok("The files have been written".to_string())

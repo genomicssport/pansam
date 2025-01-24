@@ -3,7 +3,6 @@ use clap::{Parser, Subcommand};
 #[command(
     name = "rust-samtools",
     version = "1.0",
-    about = "prepairing the json for the bacdive"
 )]
 pub struct CommandParse {
     /// subcommands for the specific actions
@@ -86,5 +85,14 @@ pub enum Commands {
         pathsam: String,
         /// provide the start coordinate to be used as a filter
         pathstart: usize,
+    },
+    /// allows for the filtering of the samfile with specified range
+    FilterRange {
+       /// provide the path to the samfile
+       pathsam: String,
+       /// provide the start coordinate to be used as filter
+       start: usize,
+       /// provide the end coordinate to be used as filter
+       end: usize,
     },
 }

@@ -2,11 +2,9 @@ use std::error::Error;
 use std::fs::File;
 use std::io::{BufRead, BufReader, Write};
 
-
 /*
 *Author Gaurav Sablok
  */
-
 
 pub fn fastid(pathsam: &str) -> Result<String, Box<dyn Error>> {
     #[derive(Debug, Clone, PartialEq, PartialOrd)]
@@ -37,7 +35,7 @@ pub fn fastid(pathsam: &str) -> Result<String, Box<dyn Error>> {
     }
     let mut sorted_id = File::create("samids.txt").expect("file not present");
     for i in limit.iter_mut() {
-        write!(sorted_id, "{}\n", i.line).expect("not able to write th line");
+        writeln!(sorted_id, "{}", i.line).expect("not able to write th line");
     }
     Ok("The files have been written and the summary is given below".to_string())
 }
