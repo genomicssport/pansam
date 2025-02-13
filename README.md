@@ -1,4 +1,4 @@
-# rust-samtools
+# pangenome-samtools
  - all rust-samtools combined into a single application
  - The indiviual ones are located at these single repositories: 
  - [rust-samtools-genomeview](https://github.com/applicativesystem/rust-samtools-genomeview)
