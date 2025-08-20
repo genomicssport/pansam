@@ -4,7 +4,6 @@
 
  <img src="https://github.com/IBCHgenomic/pansam/blob/main/pansam.png" width="100" />
 
- ![](https://github.com/IBCHgenomic/eVaiutilities/blob/main/logo.png)
 
  ```
  cargo build
