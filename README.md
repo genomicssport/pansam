@@ -2,7 +2,7 @@
 
  - all rust-samtools combined into a single application specific for the long read technologies and async threaded.
 
- <img src="https://github.com/IBCHgenomic/pansam/blob/main/pansam.png" width="350" />
+ <img src="https://github.com/IBCHgenomic/pansam/blob/main/pansam.png" width="100" />
 
  ![](https://github.com/IBCHgenomic/eVaiutilities/blob/main/logo.png)
 
@@ -30,4 +30,7 @@
   -V, --version  Print version
  ``` 
 
-Gaurav Sablok Instytut Chemii Bioorganicznej Polskiej Akademii Nauk ul. Noskowskiego 12/14 | 61-704, Poznań Poland
+Gaurav Sablok \
+Instytut Chemii Bioorganicznej Polskiej Akademii Nauk \
+ul. Noskowskiego 12/14 | \
+61-704, Poznań Poland
